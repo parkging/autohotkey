@@ -68,8 +68,8 @@ sc1F1::Key("AppsKey")
 ;#ESC::!ESC
 ;#`::!+ESC
 
-#n::Send {LAlt Down}{Space Down}{Space Up}{LAlt Up}{s}{right down}{right up}{down down}{down Up}
-#m::Send {LAlt Down}{Space Down}{Space Up}{LAlt Up}{m}{right}{left}
+;#n::Send {LAlt Down}{Space Down}{Space Up}{LAlt Up}{s}{right down}{right up}{down down}{down Up}
+;#m::Send {LAlt Down}{Space Down}{Space Up}{LAlt Up}{m}{right}{left}
 
 
 ^!Left::^!Left
@@ -90,13 +90,13 @@ return
 #End::    Send {LWin down}{Down}{LWin up}
 ;#Space:: Send {LAlt down}{Space}{n}{LAlt up}
 #Space:: WinMinimize, A
-#z::
-  Toggle := !Toggle
-  If !Toggle
-    WinRestore, A
-  else
-    WinMaximize, A
-  return
+;#z::
+;  Toggle := !Toggle
+;  If !Toggle
+;    WinRestore, A
+;  else
+;    WinMaximize, A
+;  return
 
 >+backspace::Browser_Back
 >+delete::Send {Ctrl Down}{w}{Ctrl Up}

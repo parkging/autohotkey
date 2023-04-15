@@ -239,7 +239,8 @@ Loop
     Else If (diffY < -gsize and distX < gsize)
         cmd = #{tab}
     Else If (diffY > gsize and distX < gsize)
-        WinMinimize, A
+        cmd = #{down}
+        ;WinMinimize, A
 
     Else
         cmd = {RButton}

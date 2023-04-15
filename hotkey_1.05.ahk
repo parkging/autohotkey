@@ -136,7 +136,15 @@ PrintScreen::^v
 ;!WheelUp::Volume_Up
 ;    #WheelDown::Volume_Down
 ;    #WheelUp::Volume_Up
+
 	tab::enter
+
+	#tab::
+	WinGet MX, MinMax, A
+	   If MX
+     	   WinRestore A
+	   Else WinMaximize A
+	return
 	
 	-::NumpadDiv
 	=::NumpadMult

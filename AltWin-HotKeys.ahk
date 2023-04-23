@@ -434,12 +434,14 @@ return
 
 ; Resize to half of the screen size
 ResizeHalfScreen:
-ResizeAndCenter(0.5)
+;ResizeAndCenter(0.5)
+ResizehorizontalAndCenter(0.5)
 return
 
 ; Resize to three-quarters of the screen size
 ResizeThreeQuarterScreen:
-ResizeAndCenter(0.75)
+;ResizeAndCenter(0.75)
+ResizeVerticalAndCenter(0.75)
 return
 
 ResizeFullScreen:
@@ -631,6 +633,20 @@ ResizeAndCenter(Ratio)
     WinNum := GetWindowNumber()
     CalculateSizeByWinRatio(NewW, NewH, WinNum, Ratio)
     DoResizeAndCenter(WinNum, NewW, NewH)
+}
+
+ResizehorizontalAndCenter(Ratio)
+{
+    WinNum := GetWindowNumber()
+    CalculateSizeByWinRatio(NewW, NewH, WinNum, Ratio)
+    DoResizeAndCenter(WinNum, NewW*0.9, NewH*1.1)
+}
+
+ResizeVerticalAndCenter(Ratio)
+{
+    WinNum := GetWindowNumber()
+    CalculateSizeByWinRatio(NewW, NewH, WinNum, Ratio)
+    DoResizeAndCenter(WinNum, NewW*0.6, NewH*1.1)
 }
 
 CalculateSizeByWinRatio(ByRef NewW, ByRef NewH, WinNum, Ratio)

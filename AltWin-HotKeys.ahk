@@ -259,6 +259,9 @@ SetShortcuts(ShortcutsProfile) {
     ;ReadAndStoreHotKeyAction(ShortcutsFile, "Shrink6", "Shrink", "^#NumpadSub")
     ;ReadAndStoreHotKeyAction(ShortcutsFile, "ResizeHalfScreen", "ResizeHalfScreen", "!+#Del")
     ReadAndStoreHotKeyAction(ShortcutsFile, "ResizeHalfScreen", "ResizeHalfScreen", "!+#BackSpace")
+    ReadAndStoreHotKeyAction(ShortcutsFile, "ResizeHalfScreen0", "ResizeHalfScreen0", "!+#0")
+    ReadAndStoreHotKeyAction(ShortcutsFile, "ResizeHalfScreen9", "ResizeHalfScreen9", "!+#9")
+    ReadAndStoreHotKeyAction(ShortcutsFile, "ResizeHalfScreen8", "ResizeHalfScreen8", "!+#8")
     ReadAndStoreHotKeyAction(ShortcutsFile, "ResizeThreeQuarterScreen", "ResizeThreeQuarterScreen", "!+#Home")
     ;ReadAndStoreHotKeyAction(ShortcutsFile, "ResizeFullScreen", "ResizeFullScreen", "!#Enter")
     ;ReadAndStoreHotKeyAction(ShortcutsFile, "ResizeFullScreen2", "ResizeFullScreen", "!+#Enter")
@@ -436,6 +439,24 @@ return
 ResizeHalfScreen:
 ;ResizeAndCenter(0.5)
 ResizehorizontalAndCenter(0.5)
+return
+
+; Resize to half of the screen size
+ResizeHalfScreen0:
+;ResizeAndCenter(0.5)
+ResizehorizontalAndCenter(0.4)
+return
+
+; Resize to half of the screen size
+ResizeHalfScreen9:
+;ResizeAndCenter(0.5)
+ResizeVerticalAndCenter(0.5)
+return
+
+; Resize to half of the screen size
+ResizeHalfScreen8:
+;ResizeAndCenter(0.5)
+ResizeKaKaoTalk(0.5)
 return
 
 ; Resize to three-quarters of the screen size
@@ -647,6 +668,13 @@ ResizeVerticalAndCenter(Ratio)
     WinNum := GetWindowNumber()
     CalculateSizeByWinRatio(NewW, NewH, WinNum, Ratio)
     DoResizeAndCenter(WinNum, NewW*0.6, NewH*1.1)
+}
+
+ResizeKaKaoTalk(Ratio)
+{
+    WinNum := GetWindowNumber()
+    CalculateSizeByWinRatio(NewW, NewH, WinNum, Ratio)
+    DoResizeAndCenter(WinNum, NewW*0.3, NewH*1)
 }
 
 CalculateSizeByWinRatio(ByRef NewW, ByRef NewH, WinNum, Ratio)

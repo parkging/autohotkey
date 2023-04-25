@@ -36,15 +36,15 @@ sc1F1::Key("AppsKey")
 
 
 
-;#ESC::
-;    MouseGetPos,DKE_X1,KDE_Y1,KDE_id
-;    WinSet, Bottom, , ahk_id %KDE_id%
-;return
-;#`::
-;    MouseGetPos,DKE_X1,KDE_Y1,KDE_id
-;    WinActivate,ahk_id %KDE_id%
-;    Send {LAlt Down}{LShift Down}{ESC}{LShift Up}{LAlt Up}
-;return
+#ESC::
+    MouseGetPos,DKE_X1,KDE_Y1,KDE_id
+    WinSet, Bottom, , ahk_id %KDE_id%
+return
+#`::
+    MouseGetPos,DKE_X1,KDE_Y1,KDE_id
+    WinActivate,ahk_id %KDE_id%
+    Send {LAlt Down}{LShift Down}{ESC}{LShift Up}{LAlt Up}
+return
 
 
 ;MButton::

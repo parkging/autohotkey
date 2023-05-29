@@ -11,6 +11,7 @@ sc1F1::Key("AppsKey")
 <#F11::Volume_Down
 <#F12::Volume_Up
 <#F10::Volume_Mute
+>+space::<#Tab
 
 !`::Send {LAlt Down}{LShift Down}{ESC}{LShift Up}{LAlt Up}
 

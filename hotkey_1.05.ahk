@@ -363,131 +363,148 @@ Return
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;like mac start;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-capslock::
-KeyWait, capslock
-if A_TimeSinceThisHotkey >= 250 ; in milliseconds.
-SetCapsLockState % !GetKeyState("CapsLock", "T")
-else
-Send, {vk15sc1F2}
-return
+	capslock::
+	KeyWait, capslock
+	if A_TimeSinceThisHotkey >= 250 ; in milliseconds.
+	SetCapsLockState % !GetKeyState("CapsLock", "T")
+	else
+	Send, {vk15sc1F2}
+	return
+	
+	;LAlt::LCtrl
+	
+	#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+	; #Warn  ; Enable warnings to assist with detecting common errors.
+	SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+	SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+	$!c::
+		Send {Ctrl Down}{c}{Ctrl Up}
+	Return
+	$!v::
+		Send {Ctrl Down}{v}{Ctrl Up}
+	Return
+	$!w::
+		Send {Ctrl Down}{w}{Ctrl Up}
+	Return
+	$!q::
+		Send {Ctrl Down}{F4}{Ctrl Up}
+	Return
+	$!t::
+		Send {Ctrl Down}{t}{Ctrl Up}
+	Return
+	$!s::
+		Send {Ctrl Down}{s}{Ctrl Up}
+	Return
+	$!l::
+		Send {Ctrl Down}{l}{Ctrl Up}
+	Return
+	$!z::
+		Send {Ctrl Down}{z}{Ctrl Up}
+	Return
+	$!x::
+		Send {Ctrl Down}{x}{Ctrl Up}
+	Return
+	$!a::
+		Send {Ctrl Down}{a}{Ctrl Up}
+	Return
+	$!f::
+		Send {Ctrl Down}{f}{Ctrl Up}
+	Return
+	$!n::
+		Send {Ctrl Down}{n}{Ctrl Up}
+	Return
+	$!e::
+		Send {Ctrl Down}{e}{Ctrl Up}
+	Return
+	$!,::
+		Send {Ctrl Down}{,}{Ctrl Up}
+	Return
 
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-$!c::
-	Send {Ctrl Down}{c}{Ctrl Up}
-Return
-$!v::
-	Send {Ctrl Down}{v}{Ctrl Up}
-Return
-$!w::
-	Send {Ctrl Down}{w}{Ctrl Up}
-Return
-$!q::
-	Send {Ctrl Down}{F4}{Ctrl Up}
-Return
-$!t::
-	Send {Ctrl Down}{t}{Ctrl Up}
-Return
-$!s::
-	Send {Ctrl Down}{s}{Ctrl Up}
-Return
-$!l::
-	Send {Ctrl Down}{l}{Ctrl Up}
-Return
-$!z::
-	Send {Ctrl Down}{z}{Ctrl Up}
-Return
-$!x::
-	Send {Ctrl Down}{x}{Ctrl Up}
-Return
-$!a::
-	Send {Ctrl Down}{a}{Ctrl Up}
-Return
-$!f::
-	Send {Ctrl Down}{f}{Ctrl Up}
-Return
-$!n::
-	Send {Ctrl Down}{n}{Ctrl Up}
-Return
-
-$!Left::
-	Send {Home}
-Return
-$!Right::
-	Send {End}
-Return
-
-$!+Left::
-	Send {Shift Down}{Home}{Shift Up}
-Return
-$!+Right::
-	Send {Shift Down}{End}{Shift Up}
-Return
-
-$!+Up::
-	Send {Ctrl Down}{Shift Down}{Home}{Shift Up}{Ctrl Up}
-Return
-$!+Down::
-	Send {Ctrl Down}{Shift Down}{End}{Shift Up}{Ctrl Up}
-Return
-
-$!Home::
-	Send {Ctrl Down}{Home}{Ctrl Up}
-Return
-$!End::
-	Send {Ctrl Down}{End}{Ctrl Up}
-Return
-$!+Home::
-	Send {Ctrl Down}{Shift Down}{Home}{Shift Up}{Ctrl Up}
-Return
-$!+End::
-	Send {Ctrl Down}{Shift Down}{End}{Shift Up}{Ctrl Up}
-Return
-
-$#Left::
-	Send {Ctrl Down}{Left}{Ctrl Up}
-Return
-$#Right::
-	Send {Ctrl Down}{Right}{Ctrl Up}
-Return
-$#+Left::
-	Send {Ctrl Down}{Shift Down}{Left}{Shift Up}{Ctrl Up}
-Return
-$#+Right::
-	Send {Ctrl Down}{Shift Down}{Right}{Shift Up}{Ctrl Up}
-Return
-
-$#Up::
-	Send {Alt Down}{Up}{Alt Up}
-Return
-$#Down::
-	Send {Alt Down}{Down}{Alt Up}
-Return
-
-$#BackSpace::
-	Send {Ctrl Down}{BackSpace}{Ctrl Up}
-Return
-
-$^p::
-	Send {Up}
-Return
-$^n::
-	Send {Down}
-Return
-$^f::
-	Send {right}
-Return
-$^b::
-	Send {left}
-Return
-$^e::
-	Send {End}
-Return
-$^a::
-	Send {Home}
-Return
+	$!Left::
+		Send {Home}
+	Return
+	$!Right::
+		Send {End}
+	Return
+	
+	$!+Left::
+		Send {Shift Down}{Home}{Shift Up}
+	Return
+	$!+Right::
+		Send {Shift Down}{End}{Shift Up}
+	Return
+	
+	$!+Up::
+		Send {Ctrl Down}{Shift Down}{Home}{Shift Up}{Ctrl Up}
+	Return
+	$!+Down::
+		Send {Ctrl Down}{Shift Down}{End}{Shift Up}{Ctrl Up}
+	Return
+	
+	$!Home::
+		Send {Ctrl Down}{Home}{Ctrl Up}
+	Return
+	$!End::
+		Send {Ctrl Down}{End}{Ctrl Up}
+	Return
+	$!+Home::
+		Send {Ctrl Down}{Shift Down}{Home}{Shift Up}{Ctrl Up}
+	Return
+	$!+End::
+		Send {Ctrl Down}{Shift Down}{End}{Shift Up}{Ctrl Up}
+	Return
+	
+	$!+=::
+		Send {Ctrl Down}{Shift Down}{=}{Shift Up}{Ctrl Up}
+	Return
+	$!+-::
+		Send {Ctrl Down}{Shift Down}{-}{Shift Up}{Ctrl Up}
+	Return
+	
+	
+	
+	$#Left::
+		Send {Ctrl Down}{Left}{Ctrl Up}
+	Return
+	$#Right::
+		Send {Ctrl Down}{Right}{Ctrl Up}
+	Return
+	$#+Left::
+		Send {Ctrl Down}{Shift Down}{Left}{Shift Up}{Ctrl Up}
+	Return
+	$#+Right::
+		Send {Ctrl Down}{Shift Down}{Right}{Shift Up}{Ctrl Up}
+	Return
+	
+	$#Up::
+		Send {Alt Down}{Up}{Alt Up}
+	Return
+	$#Down::
+		Send {Alt Down}{Down}{Alt Up}
+	Return
+	
+	$#BackSpace::
+		Send {Ctrl Down}{BackSpace}{Ctrl Up}
+	Return
+	
+	$^p::
+		Send {Up}
+	Return
+	$^n::
+		Send {Down}
+	Return
+	$^f::
+		Send {right}
+	Return
+	$^b::
+		Send {left}
+	Return
+	$^e::
+		Send {End}
+	Return
+	$^a::
+		Send {Home}
+	Return
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;like mac end;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -416,6 +416,9 @@ Return
 	$!e::
 		Send {Ctrl Down}{e}{Ctrl Up}
 	Return
+	$!+t::
+		Send {Ctrl Down}{Shift Down}{t}{Shift Up}{Ctrl Up}
+	Return
 	$!,::
 		Send {Ctrl Down}{,}{Ctrl Up}
 	Return
@@ -460,9 +463,15 @@ Return
 	$!+-::
 		Send {Ctrl Down}{Shift Down}{-}{Shift Up}{Ctrl Up}
 	Return
+
+	$!+[::
+		Send {Ctrl Down}{Shift Down}{tab}{Shift Up}{Ctrl Up}
+	Return
+	$!+]::
+		Send {Ctrl Down}{tab}{Ctrl Up}
+	Return
 	
-	
-	
+
 	$#Left::
 		Send {Ctrl Down}{Left}{Ctrl Up}
 	Return
@@ -505,6 +514,13 @@ Return
 	$^a::
 		Send {Home}
 	Return
+	$^+r::
+		Send {Ctrl Down}{Shift Down}{c}{Shift Up}{Ctrl Up}
+	Return
+
+
+
+
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;like mac end;;;;;;;;;;;;;;;;;;;;;;;;;;;;

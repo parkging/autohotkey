@@ -416,6 +416,39 @@ Return
 	$!e::
 		Send {Ctrl Down}{e}{Ctrl Up}
 	Return
+	$!1::
+		Send {Ctrl Down}{1}{Ctrl Up}
+	Return
+	$!2::
+		Send {Ctrl Down}{2}{Ctrl Up}
+	Return
+	$!3::
+		Send {Ctrl Down}{3}{Ctrl Up}
+	Return
+	$!4::
+		Send {Ctrl Down}{4}{Ctrl Up}
+	Return
+	$!5::
+		Send {Ctrl Down}{5}{Ctrl Up}
+	Return
+	$!6::
+		Send {Ctrl Down}{6}{Ctrl Up}
+	Return
+	$!7::
+		Send {Ctrl Down}{7}{Ctrl Up}
+	Return
+	$!8::
+		Send {Ctrl Down}{8}{Ctrl Up}
+	Return
+	$!9::
+		Send {Ctrl Down}{9}{Ctrl Up}
+	Return
+	$!0::
+		Send {Ctrl Down}{0}{Ctrl Up}
+	Return
+
+
+
 	$!+t::
 		Send {Ctrl Down}{Shift Down}{t}{Shift Up}{Ctrl Up}
 	Return
@@ -455,6 +488,10 @@ Return
 	Return
 	$!+End::
 		Send {Ctrl Down}{Shift Down}{End}{Shift Up}{Ctrl Up}
+	Return
+
+	$!+'::
+		Send {Ctrl Down}{Shift Down}{'}{Shift Up}{Ctrl Up}
 	Return
 	
 	$!+=::
@@ -517,6 +554,7 @@ Return
 	$^+r::
 		Send {Ctrl Down}{Shift Down}{c}{Shift Up}{Ctrl Up}
 	Return
+
 
 
 

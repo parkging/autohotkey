@@ -1,4 +1,4 @@
-;WIN:#, ctrl:^, alt:!, shift:+
+;WIN:#, ctrl:^, alt:!, shift:+ 
 #MaxHotkeysPerInterval 150
 #NoTrayIcon
 #SingleInstance force

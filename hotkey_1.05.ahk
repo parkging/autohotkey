@@ -70,6 +70,7 @@ Return
 >^q::Send {Alt Down}{F4}{Alt Up}
 >+enter::AltTab
 >+BackSpace::Browser_Back
+>+Delete::Send {Ctrl Down}{w}{Ctrl Up}
 AppsKey::Send {vk15sc1F2}
 AppsKey & ESC::CapsLock
 <^Left::Send {LWin down}{Ctrl Down}{Left}{Ctrl Up}{LWin up}

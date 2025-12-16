@@ -1,4 +1,5 @@
 **/**
 !*.ahk
 !KDE_Mover-Sizer.ini
+!*.ktw
 !.gitignore

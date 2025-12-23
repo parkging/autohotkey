@@ -75,6 +75,8 @@ AppsKey::Send {vk15sc1F2}
 AppsKey & ESC::CapsLock
 <^Left::Send {LWin down}{Ctrl Down}{Left}{Ctrl Up}{LWin up}
 <^Right::Send {LWin down}{Ctrl Down}{Right}{Ctrl Up}{LWin up}
+LCtrl & WheelUp:: Send {LWin down}{=}{LWin up}
+LCtrl & WheelDown:: Send {LWin down}{-}{LWin up}
 #IfWinNotActive ahk_class SunAwtFrame
 >^]::Send {Browser_Forward}
 >^[::Send {Browser_Back}

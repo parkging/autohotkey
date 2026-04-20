@@ -95,6 +95,7 @@ LCtrl & WheelDown:: Send {LWin down}{-}{LWin up}
 >^+left::SendInput {Shift Down}{home}{Shift Up}
 >^+right::SendInput {Shift Down}{end}{Shift Up}
 >^Tab::SendInput {RCtrl Down}{Alt Down}{Tab}{Alt Up}{RCtrl Up}
+LAlt & `::^+Tab
 >^g::SendInput {Alt Down}{g}{Alt up}
 >^+g::SendInput {Shift Down}{Alt Down}{g}{Alt up}{Shift Down}
 <^+r::Send {Alt Down}{Shift Down}{r}{Shift Up}{Alt Up}
